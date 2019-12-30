@@ -1,5 +1,18 @@
 # ObjectScript-Math
-Math library for InterSystems ObjectScript
+Math library for InterSystems ObjectScript. This library contains functions that are both standard to ObjectScript as well as functions that are not. For example TODO.
+
+For installation guidance, follow the steps below.
+
+If you would like to contribute, please follow the listed guidelines.
+
+To report a bug or request an enhancement, please use the Issues feature.
+
+# Installing
+## With ZPM
+- TODO
+
+## Without ZPM
+- TODO
 
 # Contributing
 ## Method names
