@@ -53,4 +53,19 @@ ClassMethod LCM(pFactors...) As %Integer [ CodeMode = expression ]
 	##class(Math.Math).LeastCommonMultiple(pFactors...)
 }
 
+ClassMethod Max(pIntegers...) As %Integer
+{
+	Set tSC=##class(Math.Math).ValidateInput(pIntegers...)
+	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
+	
+	Set tMax=""
+	Set tPosition=$o(pIntegers(""),1,tValue)
+	While tPosition'="" {
+		Set:((tMax="")||(tMax<tValue)) tMax=tValue
+		Set tPosition=$o(pIntegers(tPosition),1,tValue)
+	}
+	
+	Quit tMax
+}
+
 }
