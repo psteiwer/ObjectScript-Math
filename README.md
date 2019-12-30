@@ -15,6 +15,10 @@ To report a bug or request an enhancement, please use the [Issues feature](https
 - TODO
 
 # Contributing
+## Code Style
+- Please view LeastCommonMultiple() and follow the syntax for naming conventions, command styles, indentations, and line breaks
+- TODO, formalize style
+
 ## Method names
 - Functions should contain short and long versions
 - Example:
