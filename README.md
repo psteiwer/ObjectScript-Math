@@ -28,3 +28,11 @@ To report a bug or request an enhancement, please use the [Issues feature](https
 ## Unit Tests
 - Unit tests must accompany new functions.
 - Any bug fixes should add a new test case to the existing unit test
+
+# Running Unit Tests
+- Check if ^UnitTestRoot is defined
+-- If it is already defined
+--- Move the contents of UnitTests to the path of ^UnitTestRoot + "/ObjectScript-Math/"
+-- If it is not defined
+--- Either point ^UnitTestRoot to the path of the UnitTests directory on your system or create a new directory for unit tests, set ^UnitTestRoot to this new directory, and then follow the steps for already having ^UnitTestRoot defined
+-- Note: if your unit test directory is not in your git repo, you will need to manually move files to get updated tests
