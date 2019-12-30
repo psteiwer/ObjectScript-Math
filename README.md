@@ -41,4 +41,4 @@ After Unit Tests are configured, run the following:
 ```
 Do ##class(%UnitTest.Manager).RunTest("ObjectScript-Math")
 ```
-You can optionally include the second parameter of "/nodelete", which will not delete the classes inside of Caché/InterSystems IRIS. This can sometimes be useful if you are modifying the Unit Test and your class is not stored on the local file system.
+You can optionally include the second parameter of "/nodelete", which will not delete the classes inside of Caché/InterSystems IRIS. This can be useful if you are modifying the Unit Test and your class is not stored on the local file system.
