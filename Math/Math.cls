@@ -68,4 +68,19 @@ ClassMethod Max(pIntegers...) As %Integer
 	Quit tMax
 }
 
+ClassMethod Min(pIntegers...) As %Integer
+{
+	Set tSC=##class(Math.Math).ValidateInput(pIntegers...)
+	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
+	
+	Set tMin=""
+	Set tPosition=$o(pIntegers(""),1,tValue)
+	While tPosition'="" {
+		Set:((tMin="")||(tMin>tValue)) tMin=tValue
+		Set tPosition=$o(pIntegers(tPosition),1,tValue)
+	}
+	
+	Quit tMin
+}
+
 }

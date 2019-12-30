@@ -4,3 +4,5 @@ ROUTINE Math [TYPE=INC]
 #define LCM		##class(Math.Math).LCM
 
 #define Max		##class(Math.Math).Max
+
+#define Min		##class(Math.Math).Min
