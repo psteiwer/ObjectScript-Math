@@ -7,6 +7,10 @@ Math library for InterSystems ObjectScript
 - Example:
   - LeastCommonMultiple()
   - LCM()
+  
+## Macros
+- All methods must have a corresponding macro
+  - Both long and short versions
 
 ## Unit Tests
 - Unit tests must accompany new functions.
