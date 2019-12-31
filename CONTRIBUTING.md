@@ -1,16 +1,16 @@
 # Contributing to ObjectScript-Math
 
 ### Table of contents
-- Bug Reports
-- Enhancement Requests
-- Submitting Code
-  - Code Style
-  - Method Names
-  - Macros
-  - Unit Tests
-- Running Unit Tests
-  - With ZPM
-  - Without ZPM
+- [Bug Reports](#bug-reports)
+- [Enhancement Requests](#enhancement-requests)
+- [Submitting Code](#submitting-code)
+  - [Code Style](#code-style)
+  - [Method Names](#method-names)
+  - [Macros](#macros)
+  - [Unit Tests](#unit-tests)
+- [Running Unit Tests](#running-unit-tests)
+  - [With ZPM](#with-zpm)
+  - [Without ZPM](#without-zpm)
 
 
 ## Bug Reports
