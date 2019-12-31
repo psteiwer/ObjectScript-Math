@@ -18,6 +18,9 @@
 ## Enhancement Requests
 
 ## Submitting Code
+
+**Pull requests will NOT be approved until these conditions are met**. These requirements will ensure that the code can easily be maintained and worked on by multiple contributers. It will also help maintain the integrity and reliability of the code base.
+
 ### Code Style
 - Please view LeastCommonMultiple() and follow the syntax for naming conventions, command styles, indentations, and line breaks
 - TODO, formalize style
