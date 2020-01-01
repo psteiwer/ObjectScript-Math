@@ -1,6 +1,15 @@
 # ObjectScript-Math
 Math library for InterSystems ObjectScript. This library contains functions that are both standard to ObjectScript as well as functions that are not. For example TODO.
 
+Once this library is installed, functions can be called two ways:
+```
+Set value=##class(Math.Math).LeastCommonMultiple(134,382)
+```
+or
+```
+Set value=$$$LeastCommonMultiple(134,382)
+```
+
 For installation guidance, [follow the steps below](#installing).
 
 If you would like to contribute, please follow [the listed guidelines](#contributing).
