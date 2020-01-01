@@ -50,7 +50,7 @@ ClassMethod LeastCommonMultiple(pIntegers... As %Integer) As %Integer
 
 ClassMethod LCM(pFactors...) As %Integer [ CodeMode = expression ]
 {
-	##class(Math.Math).LeastCommonMultiple(pFactors...)
+##class(Math.Math).LeastCommonMultiple(pFactors...)
 }
 
 ClassMethod Max(pIntegers...) As %Integer
@@ -81,6 +81,39 @@ ClassMethod Min(pIntegers...) As %Integer
 	}
 	
 	Quit tMin
+}
+
+ClassMethod GreatestCommonDivisor(pIntegers...) As %Integer
+{
+	Set tRes=""
+	
+	Set tSC=##class(Math.Math).ValidateInput(pIntegers...)
+	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
+
+	Set tMin=##class(Math.Math).Min(pIntegers...)
+
+	If tMin=0 {
+		$$$ThrowStatus($$$ERROR(5001,"Cannot compute GreatestCommonDivisor of 0"))
+	}
+
+	// This can be optimized, but it works for now
+	For tNum=tMin:-1:1 {
+		For tInteger=1:1:pIntegers {
+			Set tRes=tNum
+			If (pIntegers(tInteger)/tNum)'=(pIntegers(tInteger)\tNum) {
+				Set tRes=""
+				Quit
+			}
+		}
+		Quit:tRes'=""
+	}
+	
+	Quit tRes
+}
+
+ClassMethod GCD(pFactors...) As %Integer [ CodeMode = expression ]
+{
+##class(Math.Math).GreatestCommonDivisor(pFactors...)
 }
 
 }
