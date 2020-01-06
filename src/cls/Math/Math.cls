@@ -1,20 +1,9 @@
 Class Math.Math
 {
 
-ClassMethod ValidateInput(pIntegers... As %Integer) As %Status
-{
-	Set tSC=$$$OK
-	
-	If ('$Data(pIntegers))||(($Data(pIntegers))&&(pIntegers(1)="")) {
-		Set tSC=$$$ERROR(5001,"Input must not be empty")
-	}
-	
-	Quit tSC
-}
-
 ClassMethod LeastCommonMultiple(pIntegers... As %Integer) As %Integer
 {
-	Set tSC=##class(Math.Math).ValidateInput(pIntegers...)
+	Set tSC=##class(Math.Utils).ValidateInput(pIntegers...)
 	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
 	
 	Set tRes=1
@@ -55,7 +44,7 @@ ClassMethod LCM(pFactors...) As %Integer [ CodeMode = expression ]
 
 ClassMethod Max(pIntegers...) As %Integer
 {
-	Set tSC=##class(Math.Math).ValidateInput(pIntegers...)
+	Set tSC=##class(Math.Utils).ValidateInput(pIntegers...)
 	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
 	
 	Set tMax=""
@@ -70,7 +59,7 @@ ClassMethod Max(pIntegers...) As %Integer
 
 ClassMethod Min(pIntegers...) As %Integer
 {
-	Set tSC=##class(Math.Math).ValidateInput(pIntegers...)
+	Set tSC=##class(Math.Utils).ValidateInput(pIntegers...)
 	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
 	
 	Set tMin=""
@@ -87,7 +76,7 @@ ClassMethod GreatestCommonDivisor(pIntegers...) As %Integer
 {
 	Set tRes=""
 	
-	Set tSC=##class(Math.Math).ValidateInput(pIntegers...)
+	Set tSC=##class(Math.Utils).ValidateInput(pIntegers...)
 	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
 
 	Set tMin=##class(Math.Math).Min(pIntegers...)
@@ -118,7 +107,7 @@ ClassMethod GCD(pFactors...) As %Integer [ CodeMode = expression ]
 
 ClassMethod Factorial(pValue = "") As %Integer
 {
-	Set tSC=##class(Math.Math).ValidateInput(pValue)
+	Set tSC=##class(Math.Utils).ValidateInput(pValue)
 	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
 
 	If ((pValue>23)||(pValue<-23)) {
@@ -145,7 +134,7 @@ ClassMethod Factorial(pValue = "") As %Integer
 
 ClassMethod Ceiling(pValue = "") As %Integer
 {
-	Set tSC=##class(Math.Math).ValidateInput(pValue)
+	Set tSC=##class(Math.Utils).ValidateInput(pValue)
 	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
 	
 	Quit $SYSTEM.SQL.CEILING(pValue)
@@ -153,7 +142,7 @@ ClassMethod Ceiling(pValue = "") As %Integer
 
 ClassMethod Floor(pValue = "") As %Integer
 {
-	Set tSC=##class(Math.Math).ValidateInput(pValue)
+	Set tSC=##class(Math.Utils).ValidateInput(pValue)
 	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
 	
 	Quit $SYSTEM.SQL.FLOOR(pValue)
