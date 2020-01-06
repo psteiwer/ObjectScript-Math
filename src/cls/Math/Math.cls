@@ -143,4 +143,12 @@ ClassMethod Factorial(pValue = "") As %Integer
 	Quit tRes
 }
 
+ClassMethod Ceiling(pValue = "") As %Integer
+{
+	Set tSC=##class(Math.Math).ValidateInput(pValue)
+	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
+	
+	Quit $SYSTEM.SQL.CEILING(pValue)
+}
+
 }

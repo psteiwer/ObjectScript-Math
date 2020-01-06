@@ -11,3 +11,5 @@ ROUTINE Math [Type=INC]
 #define Min		##class(Math.Math).Min
 
 #define Factorial		##class(Math.Math).Factorial
+
+#define Ceiling ##class(Math.Math).Ceiling
