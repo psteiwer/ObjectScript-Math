@@ -5,7 +5,7 @@ ClassMethod ValidateInput(pIntegers... As %Integer) As %Status
 {
 	Set tSC=$$$OK
 	
-	If '$Data(pIntegers) {
+	If ('$Data(pIntegers))||(($Data(pIntegers))&&(pIntegers(1)="")) {
 		Set tSC=$$$ERROR(5001,"Input must not be empty")
 	}
 	
@@ -114,6 +114,33 @@ ClassMethod GreatestCommonDivisor(pIntegers...) As %Integer
 ClassMethod GCD(pFactors...) As %Integer [ CodeMode = expression ]
 {
 ##class(Math.Math).GreatestCommonDivisor(pFactors...)
+}
+
+ClassMethod Factorial(pValue = "") As %Integer
+{
+	Set tSC=##class(Math.Math).ValidateInput(pValue)
+	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
+
+	If ((pValue>23)||(pValue<-23)) {
+		Set tSize=$Select(pValue>23:"larger",1:"smaller")
+		Set tNegative=$Select(pValue>23:"",1:"-")
+		$$$ThrowStatus($$$ERROR($$$GeneralError,"Value must not be "_tSize_" than "_tNegative_"23"))
+	}
+
+	// This is not a boolean, but a multiplier for if the number is negative
+	Set tNegative=1
+	If pValue<0 {
+		Set tNegative=-1
+		Set pValue=$ZAbs(pValue)
+	}
+	Set tRes=pValue
+	For tVal=pValue-1:-1:1 {
+		Set tRes=tRes*tVal
+	}
+
+	Set tRes=tRes*tNegative
+
+	Quit tRes
 }
 
 }

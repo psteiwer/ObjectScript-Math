@@ -9,3 +9,5 @@ ROUTINE Math [Type=INC]
 #define Max		##class(Math.Math).Max
 
 #define Min		##class(Math.Math).Min
+
+#define Factorial		##class(Math.Math).Factorial
