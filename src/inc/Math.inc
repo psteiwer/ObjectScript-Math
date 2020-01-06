@@ -13,3 +13,5 @@ ROUTINE Math [Type=INC]
 #define Factorial		##class(Math.Math).Factorial
 
 #define Ceiling ##class(Math.Math).Ceiling
+
+#define Floor ##class(Math.Math).Floor

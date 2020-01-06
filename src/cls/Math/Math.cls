@@ -151,4 +151,12 @@ ClassMethod Ceiling(pValue = "") As %Integer
 	Quit $SYSTEM.SQL.CEILING(pValue)
 }
 
+ClassMethod Floor(pValue = "") As %Integer
+{
+	Set tSC=##class(Math.Math).ValidateInput(pValue)
+	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
+	
+	Quit $SYSTEM.SQL.FLOOR(pValue)
+}
+
 }
