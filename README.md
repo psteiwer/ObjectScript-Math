@@ -49,12 +49,15 @@ If ZPM is not installed and you do not plan on installing it, you can still quic
 3. Run the following commands
 ```
 Set path="COPIED PATH FROM STEP 2"
-Do $system.OBJ.Load(path_"/src/cls/Math/Math.cls,"_path_"/src/inc/Math.inc","ck")
+Do $system.OBJ.LoadDir(path_"/src/cls/Math/","ck")
+Do $system.OBJ.ImportDir(path_"/src/inc/")
 ```
+This will load Math.Math.cls, Math.Utils.cls, and Math.inc
 4. If you would also plan on developing/contributing to this library, run the following command
 ```
-Do $system.OBJ.LoadDir(path_"/src/cls/UnitTests/","ck")
+Do $system.OBJ.LoadDir(path_"/src/cls/UnitTests/","ck",,1)
 ```
+This will additionally load the Unit Tests
 
 # Contributing
 Please see [the Contributing Guide](https://github.com/psteiwer/ObjectScript-Math/blob/master/CONTRIBUTING.md)
