@@ -152,6 +152,9 @@ ClassMethod Ceiling(pValue = "") As %Integer
 	Quit $SYSTEM.SQL.CEILING(pValue)
 }
 
+/// Wrapper for $SYSTEM.SQL.FLOOR</br>
+/// Accepts a single value and outputs the Floor</br>
+/// Null input is not valid
 ClassMethod Floor(pValue = "") As %Integer
 {
 	Set tSC=##class(Math.Utils).ValidateInput(pValue)
