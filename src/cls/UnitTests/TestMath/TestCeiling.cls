@@ -1,6 +1,6 @@
 Include Math
 
-Class UnitTests.TestCeiling Extends %UnitTest.TestCase
+Class UnitTests.TestMath.TestCeiling Extends %UnitTest.TestCase
 {
 
 Method TestNegative()

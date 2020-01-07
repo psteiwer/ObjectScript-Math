@@ -1,6 +1,6 @@
 Include Math
 
-Class UnitTests.TestGreatestCommonDivisor Extends %UnitTest.TestCase
+Class UnitTests.TestMath.TestGreatestCommonDivisor Extends %UnitTest.TestCase
 {
 
 Method TestTwoNumbers()

@@ -1,5 +1,6 @@
-include Math
-Class UnitTests.TestMin Extends %UnitTest.TestCase
+Include Math
+
+Class UnitTests.TestMath.TestMin Extends %UnitTest.TestCase
 {
 
 Method TestOneNumber()
@@ -54,4 +55,5 @@ Method TestMacro()
 	Set tExpected=15
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }
+
 }

@@ -1,5 +1,6 @@
-include Math
-Class UnitTests.TestLeastCommonMultiple Extends %UnitTest.TestCase
+Include Math
+
+Class UnitTests.TestMath.TestLeastCommonMultiple Extends %UnitTest.TestCase
 {
 
 Method TestTwoNumbers()

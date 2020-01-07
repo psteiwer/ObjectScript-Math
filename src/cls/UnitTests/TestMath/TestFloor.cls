@@ -1,6 +1,6 @@
 Include Math
 
-Class UnitTests.TestFloor Extends %UnitTest.TestCase
+Class UnitTests.TestMath.TestFloor Extends %UnitTest.TestCase
 {
 
 Method TestNegative()
