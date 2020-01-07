@@ -41,14 +41,4 @@ Method TestArray()
 	Do $$$AssertEquals(tResult,tExpected,tExpected_" = "_tResult)
 }
 
-Method TestArrayNoTopLevel()
-{
-    Do $$$AssertSkipped("Skipped due to null input being passed through")
-    Quit
-    Set tArray(1)=17
-    Set tResult=##class(Math.Utils).ValidateInput(tArray...)
-	Set tExpected=$$$OK
-	Do $$$AssertEquals(tResult,tExpected,tExpected_" = "_tResult)
-}
-
 }
