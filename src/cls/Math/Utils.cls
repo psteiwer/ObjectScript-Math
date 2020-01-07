@@ -1,6 +1,9 @@
 Class Math.Utils
 {
 
+/// This method will validate the input to confirm there are values to process</br>
+/// <var>pIntegers</var> accepts a variable number of parameters</br>
+/// If <var>pIntegers</var> has no data or subscript 1 has no data, it will return an error
 ClassMethod ValidateInput(pIntegers... As %Integer) As %Status
 {
 	Set tSC=$$$OK
@@ -12,6 +15,10 @@ ClassMethod ValidateInput(pIntegers... As %Integer) As %Status
 	Quit tSC
 }
 
+/// This method will check to see if pValue is within the range of pMin to pMax</br>
+/// <var>pValue</var> is the value that is being evaluated</br>
+/// <var>pMin</var> is the lowest value of the acceptable range</br>
+/// <var>pMax</var> is the highest value of the acceptable range
 ClassMethod ValidateRange(pValue As %Integer = "", pMin As %Integer = "", pMax As %Integer = "") As %Status
 {
 	Set tSC=$$$OK
