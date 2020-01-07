@@ -12,4 +12,15 @@ ClassMethod ValidateInput(pIntegers... As %Integer) As %Status
 	Quit tSC
 }
 
+ClassMethod ValidateRange(pValue As %Integer, pMin As %Integer, pMax As %Integer) As %Status
+{
+	Set tSC=$$$OK
+    
+    If ((pValue<pMin)||(pValue>pMax)) {
+		Set tSC=$$$ERROR($$$GeneralError,"Value out of range")
+    }
+	
+	Quit tSC
+}
+
 }
