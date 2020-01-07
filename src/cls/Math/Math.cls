@@ -115,6 +115,8 @@ ClassMethod GCD(pFactors...) As %Integer [ CodeMode = expression ]
 ##class(Math.Math).GreatestCommonDivisor(pFactors...)
 }
 
+/// Accepts a single value and returns the factorial of that value</br>
+/// Only accepts range of -23 to +23
 ClassMethod Factorial(pValue = "") As %Integer
 {
 	Set tSC=##class(Math.Utils).ValidateInput(pValue)
