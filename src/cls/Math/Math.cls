@@ -45,6 +45,7 @@ ClassMethod LCM(pFactors...) As %Integer [ CodeMode = expression ]
 ##class(Math.Math).LeastCommonMultiple(pFactors...)
 }
 
+/// Accepts a variable number of parameters and outputs the max value
 ClassMethod Max(pIntegers...) As %Integer
 {
 	Set tSC=##class(Math.Utils).ValidateInput(pIntegers...)
