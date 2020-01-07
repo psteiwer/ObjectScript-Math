@@ -77,6 +77,8 @@ ClassMethod Min(pIntegers...) As %Integer
 	Quit tMin
 }
 
+/// Accepts a variable number of parameters and outputs the Greatest Common Divisor of them</br>
+/// Null input and 0 are not valid
 ClassMethod GreatestCommonDivisor(pIntegers...) As %Integer
 {
 	Set tRes=""
@@ -105,6 +107,7 @@ ClassMethod GreatestCommonDivisor(pIntegers...) As %Integer
 	Quit tRes
 }
 
+/// See <method>GreatestCommonDivisor</method>
 ClassMethod GCD(pFactors...) As %Integer [ CodeMode = expression ]
 {
 ##class(Math.Math).GreatestCommonDivisor(pFactors...)
