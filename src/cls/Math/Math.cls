@@ -1,6 +1,8 @@
 Class Math.Math
 {
 
+/// Accepts a variable number of parameters and outputs the Least Common Multiple of them</br>
+/// Null input and 0 are not valid
 ClassMethod LeastCommonMultiple(pIntegers... As %Integer) As %Integer
 {
 	Set tSC=##class(Math.Utils).ValidateInput(pIntegers...)
@@ -37,6 +39,7 @@ ClassMethod LeastCommonMultiple(pIntegers... As %Integer) As %Integer
 	Quit tRes
 }
 
+/// See <method>LeastCommonMultiple</method>
 ClassMethod LCM(pFactors...) As %Integer [ CodeMode = expression ]
 {
 ##class(Math.Math).LeastCommonMultiple(pFactors...)
