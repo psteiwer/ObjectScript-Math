@@ -61,6 +61,7 @@ ClassMethod Max(pIntegers...) As %Integer
 	Quit tMax
 }
 
+/// Accepts a variable number of parameters and outputs the min value
 ClassMethod Min(pIntegers...) As %Integer
 {
 	Set tSC=##class(Math.Utils).ValidateInput(pIntegers...)
