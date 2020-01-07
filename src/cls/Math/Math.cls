@@ -110,11 +110,8 @@ ClassMethod Factorial(pValue = "") As %Integer
 	Set tSC=##class(Math.Utils).ValidateInput(pValue)
 	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
 
-	If ((pValue>23)||(pValue<-23)) {
-		Set tSize=$Select(pValue>23:"larger",1:"smaller")
-		Set tNegative=$Select(pValue>23:"",1:"-")
-		$$$ThrowStatus($$$ERROR($$$GeneralError,"Value must not be "_tSize_" than "_tNegative_"23"))
-	}
+	Set tSC=##class(Math.Utils).ValidateRange(pValue,-23,23)
+	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
 
 	// This is not a boolean, but a multiplier for if the number is negative
 	Set tNegative=1

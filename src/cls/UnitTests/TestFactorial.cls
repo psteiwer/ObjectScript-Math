@@ -24,7 +24,7 @@ Method TestTooLarge()
 	} Catch ex {
 		Set tResults=$SYSTEM.Status.GetErrorText(ex.AsStatus())
 	}
-	Set tExpected="ERROR #5001: Value must not be larger than 23"
+	Set tExpected="ERROR #5001: Value out of range"
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }
 
@@ -35,7 +35,7 @@ Method TestTooSmall()
 	} Catch ex {
 		Set tResults=$SYSTEM.Status.GetErrorText(ex.AsStatus())
 	}
-	Set tExpected="ERROR #5001: Value must not be smaller than -23"
+	Set tExpected="ERROR #5001: Value out of range"
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }
 
