@@ -141,6 +141,9 @@ ClassMethod Factorial(pValue = "") As %Integer
 	Quit tRes
 }
 
+/// Wrapper for $SYSTEM.SQL.CEILING</br>
+/// Accepts a single value and outputs the Ceiling</br>
+/// Null input is not valid
 ClassMethod Ceiling(pValue = "") As %Integer
 {
 	Set tSC=##class(Math.Utils).ValidateInput(pValue)
