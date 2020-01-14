@@ -44,20 +44,18 @@ zpm: SAMPLES>install objectscript-math
 
 ## Without ZPM
 If ZPM is not installed and you do not plan on installing it, you can still quickly install this library.
-1. Download the ZIP file from this repository
-2. Extract the files and copy the path
+
+If you plan on contributing, simply clone this Repository and load the files
+
+If you would just like to use this library, please follow these steps:
+1. Navigate to the [latest release](https://github.com/psteiwer/ObjectScript-Math/releases/latest)
+2. Download the .xml file (ObjectScript-MathvX-X-X.xml) from the assets and copy the path to the file
 3. Run the following commands
 ```
 Set path="COPIED PATH FROM STEP 2"
-Do $system.OBJ.LoadDir(path_"/src/cls/Math/","ck")
-Do $system.OBJ.ImportDir(path_"/src/inc/")
+Do $system.OBJ.Load(path,"ck")
 ```
 This will load Math.Math.cls, Math.Utils.cls, and Math.inc
-4. If you would also plan on developing/contributing to this library, run the following command
-```
-Do $system.OBJ.LoadDir(path_"/src/cls/UnitTests/","ck",,1)
-```
-This will additionally load the Unit Tests
 
 # Contributing
 Please see [the Contributing Guide](https://github.com/psteiwer/ObjectScript-Math/blob/master/CONTRIBUTING.md)
