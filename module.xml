@@ -3,7 +3,8 @@
   <Document name="objectscript-math.ZPM">
     <Module>
       <Name>objectscript-math</Name>
-      <Version>0.0.4</Version>
+      <Version>0.0.5</Version>
+	<Description>Math library for InterSystems ObjectScript</Description>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
       <Resource Name="Math.PKG"/>
