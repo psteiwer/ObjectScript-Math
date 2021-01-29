@@ -9,7 +9,7 @@
       <SourcesRoot>src</SourcesRoot>
       <Resource Name="Math.PKG"/>
       <Resource Name="Math.inc"/>
-	  <UnitTest Name="src/cls/UnitTests" Package="UnitTests" Phase="test"/>
+	  <UnitTest Name="src/cls" Package="UnitTests" Phase="test"/>
     </Module>
   </Document>
 </Export>
