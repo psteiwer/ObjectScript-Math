@@ -1,4 +1,7 @@
 # ObjectScript-Math
+
+ [![Quality Gate Status](https://community.objectscriptquality.com/api/project_badges/measure?project=intersystems_iris_community%2FObjectScript-Math&metric=alert_status)](https://community.objectscriptquality.com/dashboard?id=intersystems_iris_community%2FObjectScript-Math)
+ 
 Math library for InterSystems ObjectScript. This library contains functions that are both standard to ObjectScript as well as functions that are not. For example TODO.
 
 Once this library is installed, functions can be called two ways:
